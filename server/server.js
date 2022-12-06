@@ -29,7 +29,7 @@ mongoose
     process.exit();
   });
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to Home Page of Company - Assignment One</h1>");
+  res.send("<h1>Welcome - Assignment One</h1>");
 });
 
 app.listen(SERVER_PORT, () => {
