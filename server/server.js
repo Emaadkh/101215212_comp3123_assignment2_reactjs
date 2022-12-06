@@ -2,8 +2,12 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRouter = require("./routes/users");
 const employeeRouter = require("./routes/employees");
+const cors = require('cors');
 
 const app = express();
+app.use(cors({
+  origin: 'http://localhost:3001'
+}));
 app.use(express.json());
 
 

@@ -21,9 +21,11 @@ route.post('/user/login', async(req, res) => {
   
     let password = req.body.password
     let userName = req.body.username
+    console.log({userName})
+    console.log({password})
     const user = await userModel.findOne({username : userName})
 
-    if(!user) {
+    if(!!!user) {
         res.status(404).send({"message": "Error "})
     }
 
